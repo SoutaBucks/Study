@@ -1,0 +1,220 @@
+/* 사이트 전체 글꼴은 맑은 고딕 */
+  body {
+    font-family: "맑은 고딕", 돋움;
+    background-color: #F2F2F2;
+  }
+  /* 헤더와 여행지 목록 부분 구분 */
+  header, section {
+    border-bottom: 1px solid black;
+  }
+  /* 링크 글씨 아무런 효과 주지 않기*/
+  ul a {
+    text-decoration: none;
+    color: black;
+  }
+  /* nav 부분에 ul 위 아래에 일정한 공간을 줌 */
+  nav  {
+    display: flex;
+    align-items: center;
+  }
+  /* ul의 각 li를 여백을 사이로 하여 일정하게 배열 */
+  nav ul {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  select option[value=""][disabled] {
+    display: none;
+  }
+  /* 전체적인 사이트는 양쪽에 약 5%의 공간을 남겨두자 */
+  /* 라고 했으나 일단 고정해 놓자 (자꾸 변해서) */
+  #container {
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 0px 20px;
+    background-color: white;
+    }
+  
+  /* 회사 로고는 복숭아색 */
+  #company_logo {
+    display: inline-block;
+    color: palevioletred;
+    margin-right: 300px;
+    }      
+  /* 목적지 검색 창은 사이트 오른쪽 위에*/
+  .search_part {
+    display: inline-block;
+    width: 430px;
+    text-align: right;
+  }
+  /* 검색 창 크게 */
+  #search_in {
+    width: 80%;
+    height: 30px;
+    font-size: 17px;
+  }
+  /* 여행지 목록과 메뉴 목록 앞 인덱스 없앰*/
+  .item_list, .menu {
+    list-style: none;
+  }
+  /* 여행지 목록은 가운데로 */
+  .item_list {
+    text-align: center;
+  }
+  /* 여행지 목록과 메뉴 목록 각각을 인라인 블록으로 한다*/
+  .item_list li, .menu li{
+    display: inline-block;
+  }
+  /* 여행지 목록 사이에 여백을 둠 */
+  .item_list li {
+    margin: 5px 30px;
+  }      
+  /* 메뉴에 커서 올리면 색이 변하고 밑줄 생김 */
+  .menu li a:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+  /* 여행지 사진의 크기를 설정 함*/
+  /* 테두리는 약간 둥글게 */
+  .item_image {
+    width: 240px;
+    height: 160px;
+    border-radius: 10px;
+  }
+  /* 여행지 설명은 사진 밑에 가운데 정렬*/
+  .disc {
+    text-align: left;
+  }
+  /*------------세트로 있어야함------------*/
+  /* 이미지 위에 텍스트 놓기 */
+  .place-wrap {
+    position: relative;
+  }
+  /* 텍스트 가운데 놓고 크기 색 정함 */
+  .place-wrap .title {
+    position: absolute;
+    top: 65px;
+    left: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+  /*-------------------------------------*/
+  /* 설명란 크기 설정*/
+  .disc span.title {
+    width: 240px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  /* 가격은 설명에 비해 굵고 크게 */
+  .disc span.price {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  /* 설명란의 설명부분과 가격부분을 각각 block으로 해야 세로로 놓을 수 있다*/
+  .disc span {
+    display: block;
+    font-size: 16px;
+  }
+  /* 추천 여행과 설명 사이의 간격 */
+  #recommend .item_image {
+    margin-bottom: 10px;
+  }
+  /* 항공편 밑줄과의 간격을 줌 */
+  /* 여기는 css 폴더 안이어서 더 윗부분으로 간후에 images 폴더에 들어가야함 */
+  #flight {
+    padding: 20px 10px;
+    width: 980px;
+    height: 200px;
+    /*background-image: url('/images/flight-background.jpg');
+    background-size: 100% 100%;
+    */
+    background-color: #dcdcdc;
+  }
+  /* 왕복, 편도 선택 버튼 여백 */
+  #flight-type {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  /* ----------------------------------------------- */
+  /* 왕복, 편도 선택 부분을 라디오가 아닌
+     일반 버튼으로 보이게끔 디자인 */
+
+  /* radio 버튼을 없애 줌 */
+  #flight input[type="radio"] {
+    display: none;
+  }
+  /* radio 속 span 부분에 border를 주면 
+     버튼처럼 보인다 */
+  #flight input[type="radio"] + span {
+    display: inline-flex;
+    padding: 5px;
+    /*border: 1px solid #dfdfdf;   
+    color: white;
+    border-radius: 10px;*/
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  /* 선택된 버튼은 밑줄을 친다*/
+  #flight input[type="radio"]:checked + span {
+    /*background-color: #113a6b;
+    color: #ffffff;*/
+    border-bottom: 2px solid black;
+  }
+  /* ------------------------------------------------ */
+  /* 
+      「출발지」(화살표)「도착지」
+          「출발날」「도착날」 
+      의 형태로 만들고 싶다
+  */
+  /* 출발지, 도착지 선택 칸 사이의 공간과 왼쪽, 아래 여백을 준다*/
+  #depart-arrive {
+    display: flex;
+    justify-content: space-around;
+    width: 650px;
+    margin: 0px 0px 20px 165px;
+  }
+  /* 선택창의 크기를 같게 하고 중앙에 오도록 한다*/
+  #depart-arrive > select {
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    text-align-last: center;
+  }
+  /* 날짜 선택칸은 중앙에 붙어서 설정한다 */
+  #depart-arrive-day  {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  /* 출발지 보다는 작게 한다 */
+  #depart-arrive-day input {
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: transparent;
+  }
+  /* 인원 선택 칸은 날짜 밑에 */
+  #going-people {
+    text-align: center;
+  }
+  /* 찾아보기 버튼 */
+  #flight_submit_button {
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+  #flight_submit_button:hover {
+    background-color: #CECEF6;
+    cursor: pointer;
+  }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행은 모모트립</title>
+    <link href="css/home.css" rel="stylesheet">
+</head>
+<body>
+  <div id="container">
+		<!-- 회사 로고, 검색창, 로그인-->
+    <header>
+      <h1 id="company_logo">MomoTrip</h1>
+      <!-- 검색창은 일단 모습만 그럴싸하게  -->
+      <span class="search_part">
+        <form action="" method="post" target="_blank">
+          <input type="search" id="search_in" placeholder="가고 싶은 여행지">
+          <input type="submit" value="검색" >
+        </form>
+      </span>
+    </header>
+    <div id="item">
+    <!-- ----------------------------------------------- -->
+    <!-- 여행 목적지 나열하는 곳 -->
+    <section id="domestic">
+      <h2>국내 가볼만한 곳</h2>     <!-- 각각의 여행지들을 가로로 나열한 후에 --> 
+      <ul class="item_list">       <!-- 이미지를 같이 보여주면 좋을 듯 -->
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Jeju.jpg" class="item_image"></span>
+            <span class="title">제주</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Pusan.jpg" class="item_image"></span>
+            <span class="title">부산</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Jeonju.jpg" class="item_image"></span>
+            <span class="title">전주</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Chuncheon.jpg" class="item_image"></span>
+            <span class="title">춘천</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Yeosu.jpg" class="item_image"></span>
+            <span class="title">여수</span>            
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Chungju.jpg" class="item_image"></span>
+            <span class="title">충주</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id="abroad">
+      <h2>격리 면제 여행지</h2>
+      <ul class="item_list">
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Tokyo.jpg" class="item_image"></span>
+            <span class="title">도쿄</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Paris.jpg" class="item_image"></span>      
+            <span class="title">파리</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Newyork.jpg" class="item_image"></span>
+            <span class="title">뉴욕</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/London.jpg" class="item_image"></span>
+            <span class="title">런던</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Madrid.jpg" class="item_image"></span>
+            <span class="title">마드리드</span>
+          </a>
+        </li>
+        <li class="place-wrap">
+          <a href="#">
+            <span><img src="images/Kairo.jpg" class="item_image"></span>
+            <span class="title">카이로</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id="recommend">
+      <!-- ----------------------------------------------- -->
+      <!-- 추천하는 상품 나열 (랜덤) -->
+      <h2>추천하는 여행 상품</h2>
+      <ul class="item_list">
+    	  <li>
+          <a href="">
+            <span><img src="images/Fukuoka.jpg" class="item_image"></span>
+            <div class="disc">
+              <span class="title">후쿠오카 3박 4일 여행</span>
+              <span class="price">670,000원~</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><img src="images/LA.jpg" class="item_image"></span>
+            <div class="disc">
+              <span class="title">LA 2박 3일 패키지</span>
+              <span class="price">1,320,000원~</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span><img src="images/Dokdo.jpg" class="item_image"></span>
+            <div class="disc">
+              <span class="title">울릉도 & 독도 1박 2일 여행</span>
+              <span class="price">250,000원~</span>
+            </div>
+          </a>
+        </li>
+      </ul> 
+    </section>
+    </div>
+    <!-- ----------------------------------------------- -->
+    <!-- 항공편 알아보기 -->      
+    <section id="flight">
+      <form action="" method="post" target="_blank">
+        <!-- 편도, 왕복 선택 부분을 radio처럼 하지만 형태는 button처럼 -->
+        <div id="flight-type">
+            <label>
+                <input type="radio" name="how_to_go" checked>
+                <span>왕복</span>
+            </label>
+            <label>
+                <input type="radio" name="how_to_go">
+                <span>편도</span>
+            </label>
+        </div>
+        <div id="flight-inform">
+          <div id="depart-arrive">
+            <!-- 출발지와 도착지를 설정 -->
+            <!-- 출발지와 도착지 모두 placeholder 사용 (한것처럼)-->
+            <select size="1" name="depart" required>
+              <option value="" disabled selected>출발지</option>
+              <option value="Busan">부산(김해)</option>
+              <option value="Muan">무안</option>
+              <option value="Seoul">서울(김포)</option>
+              <option value="Incheon">인천</option>
+              <option value="Yangyang">양양</option>
+              <option value="Daegu">대구</option>
+              <option value="Cheongju">청주</option>
+            </select>
+            <select size="1" name="arrive" required>
+              <option value="" disabled selected>도착지</option>
+              <optgroup label="대한민국">
+                <option value="Busan">부산(김해)</option>
+                <option value="Muan">무안</option>
+                <option value="Seoul">서울(김포)</option>
+                <option value="Incheon">인천</option>
+                <option value="Yangyang">양양</option>
+                <option value="Daegu">대구</option>
+                <option value="Cheongju">청주</option>
+              </optgroup>
+              <optgroup label="일본">
+                <option value="Tokyo">도쿄(나리타)</option>
+                <option value="Osaka">오사카</option>
+                <option value="Fukuoka">후쿠오카</option>
+                <option value="Hokkaido">홋카이도(신치토세)</option>
+                <option value="Akita">아키타</option>
+              </optgroup>
+              <optgroup label="유럽">
+                <option value="London">런던</option>
+                <option value="Paris">파리</option>
+                <option value="Madrid">마드리드</option>
+            </optgroup>
+          </select>
+          </div>
+          <div id="depart-arrive-day">
+            <!-- 날짜는 오늘 날짜로 설정하고 사용자가 직접 눌러서 설정하기 -->
+            <input type="date" name="depart_day">
+            <input type="date" name="arrive_day">
+          </div>
+        </div>
+        <!-- 인원수는 ....-->
+        <h4>인원 수를 선택해주세요! <small>(아이는 만 5세까지 입니다)</small></h4>
+        <label>어른 <input type="number" name="adult_cnt" min="0" max="10" value="1">명</label>
+        <label>아이 <input type="number" name="child_cnt" min="0" max="10" value="0">명</label>
+        <!-- 검색 버튼은 아래에 길게-->
+        <input type="submit" value="찾아보기">
+      </form>
+    </section>    
+    <!-- ----------------------------------------------- -->
+    <!-- 회사소개, 여행약관, 로그인, 공지사항, 고객센터-->
+    
+    <footer>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">여행약관</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>
